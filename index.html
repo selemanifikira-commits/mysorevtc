@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Mysore Vocational Training Center — Management System</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="app">
+  <aside class="sidebar">
+    <div class="brand">
+      <div class="logo">MV</div>
+      <div><b>Mysore VTC</b><small>Management System</small></div>
+    </div>
+    <nav id="nav">
+      <button class="nav-item active" data-page="dashboard">▦ <span>Dashboard</span></button>
+      <button class="nav-item" data-page="students">◉ <span>Students</span></button>
+      <button class="nav-item" data-page="admissions">＋ <span>Admissions</span></button>
+      <button class="nav-item" data-page="staff">♙ <span>Staff Management</span></button>
+      <button class="nav-item" data-page="fees">▣ <span>Fees & Payments</span></button>
+      <button class="nav-item" data-page="results">✓ <span>Results</span></button>
+      <button class="nav-item" data-page="timetable">▤ <span>Timetable</span></button>
+      <button class="nav-item" data-page="notices">◈ <span>Notice Board</span></button>
+      <button class="nav-item" data-page="emails">✉ <span>Emails</span></button>
+    </nav>
+    <div class="side-bottom">
+      <div class="demo-badge">DEMO MODE</div>
+      <a href="https://wa.me/255617585318" target="_blank">WhatsApp Support</a>
+    </div>
+  </aside>
+
+  <main class="main">
+    <header class="topbar">
+      <button id="mobileMenu" class="icon-btn">☰</button>
+      <div class="crumb" id="pageTitle">Dashboard</div>
+      <div class="top-actions">
+        <button class="icon-btn" onclick="showToast('No new notifications')">🔔</button>
+        <div class="profile"><div class="avatar">A</div><span>Administrator</span>⌄</div>
+      </div>
+    </header>
+    <section id="content" class="content"></section>
+  </main>
+</div>
+<div id="modal" class="modal hidden">
+  <div class="modal-card">
+    <button class="modal-close" onclick="closeModal()">×</button>
+    <div id="modalBody"></div>
+  </div>
+</div>
+<div id="toast" class="toast"></div>
+<script src="app.js"></script>
+</body>
+</html>
